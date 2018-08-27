@@ -1,4 +1,4 @@
-dir - Exibe os diretórios
+dir - Exibe os diretórios<br />
 cd - Abre um diretório ou volta ao diretório anterior
 md - Cria um diretório
 rd - Remove um diretório
