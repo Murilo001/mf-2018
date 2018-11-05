@@ -10,7 +10,7 @@ dada data, e pode ser publicada no repositório Maven Central, do qual pode
 ser reutilizada por outros projetos. A aplicação exibe o dia da semana da 
 data em que é executado.
 
-> _O objetivo é ilustrar uma possível organização de código em Java usando
+> _O objetivo é ilustrar  uma possível organização de código em Java usando
 Maven e "boas práticas" para inspirar projetos "reais"_.
 
 ## Requisitos são atendidos?
