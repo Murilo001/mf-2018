@@ -1,39 +1,40 @@
+
 /*
- * Copyright (c) 2016.
+ * Copyright (c) 2018.
  * Fábrica de Software - Instituto de Informática (UFG)
  * Creative Commons Attribution 4.0 International License.
  */
-
-package com.github.kyriosdata.exemplo;
+package com.github.murilo001.cnes;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 /**
- * Programa que exibe o dia da semana para o dia em que é executado.
+ * Programa que faz o download do zip, extrai o csv, faz processamento e exibe
+ * os resultados, juntamente com a localização, em uma tabela.
  *
  */
-public final class ProgramaCalendario {
-
+public final class ProgramaCsv {
+    
     private static final Logger logger =
-            LogManager.getLogger(ProgramaCalendario.class);
-
+            LogManager.getLogger(ProgramaCsv.class);
+    
     /**
      * Restringe criação de instância.
      */
-    private ProgramaCalendario() {
+    private ProgramaCsv() {
         // Apenas evita criação de instância.
     }
-
-    /**
+    
+    
+     /**
      * Ponto de entrada da aplicação. Apenas para ilustra chamada de método.
      *
      * @param args Ignorados.
      */
-    public static void main(final String[] args) {
-
-        logger.info("iniciado");
-        System.out.println(Calendario.diaDaSemanaParaHoje());;
+    public static void main(String[] args) {
+        
     }
-
+    
 }

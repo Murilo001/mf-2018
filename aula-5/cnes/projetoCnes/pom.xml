@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.kyriosdata</groupId>
-    <artifactId>exemplo</artifactId>
+    <groupId>com.github.murilo001</groupId>
+    <artifactId>cnes</artifactId>
     <packaging>jar</packaging>
     <version>1.0.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.mainClass>com.github.kyriosdata.exemplo.ProgramaCalendario
+        <project.mainClass>com.github.murilo001.cnes.ProgramaCsv
         </project.mainClass>
     </properties>
 
@@ -24,7 +24,7 @@
         necessidades específicas do projeto em questão.
     </description>
 
-    <url>https://github.com/kyriosdata/exemplo</url>
+    <url>https://github.com/murilo001/cnes</url>
 
     <organization>
         <name>Instituto de Informática (UFG) - Fábrica de Software</name>
@@ -54,14 +54,25 @@
             <organization>Instituto de Informática (UFG)</organization>
             <organizationUrl>http://www.inf.ufg.br</organizationUrl>
         </developer>
+        
+         <developer>
+            <id>murilo001</id>
+            <name>Murilo de Oliveira Silva</name>
+            <email>murilo001os@gmail.com</email>
+            <organization>Instituto de Informática (UFG)</organization>
+            <organizationUrl>http://www.inf.ufg.br</organizationUrl>
+        </developer>
+        
     </developers>
+    
+       
 
     <scm>
-        <connection>scm:git:https://github.com/kyriosdata/exemplo.git
+        <connection>scm:git:https://github.com/murilo001/cnes.git
         </connection>
-        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git
+        <developerConnection>scm:git:https://github.com/murilo001/cnes.git
         </developerConnection>
-        <url>https://github.com/kyriosdata/exemplo</url>
+        <url>https://github.com/murilo001/cnes</url>
     </scm>
 
     <dependencies>
@@ -85,6 +96,19 @@
             <artifactId>log4j-api</artifactId>
             <version>2.11.1</version>
         </dependency>
+        
+   <!--Tentando previnir falha no build -->
+          <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+   <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-simple</artifactId>
+       <version>1.6.4</version>
+   </dependency>
+   <!--Tentando previnir falha no build - fim -->
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -109,7 +133,7 @@
     <build>
 
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-        <finalName>exemplo</finalName>
+        <finalName>cnes</finalName>
 
         <plugins>
 
@@ -239,10 +263,10 @@
                 </dependencies>
                 <configuration>
                     <targetClasses>
-                        <param>com.github.kyriosdata.exemplo.Calendario</param>
+                        <param>com.github.murilo001.cnes.Csv</param>
                     </targetClasses>
                     <targetTests>
-                        <param>com.github.kyriosdata.exemplo.*</param>
+                        <param>com.github.murilo001.cnes.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
@@ -263,7 +287,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>3.2.1</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -463,7 +487,7 @@
                         <configuration>
                             <apiToken>${snyk.token}</apiToken>
                             <failOnSeverity>low</failOnSeverity>
-                            <org>kyriosdata</org>
+                            <org>murilo001</org>
                         </configuration>
                     </plugin>
 
