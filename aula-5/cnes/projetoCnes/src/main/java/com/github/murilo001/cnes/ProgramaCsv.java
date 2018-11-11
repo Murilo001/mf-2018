@@ -6,9 +6,10 @@
  */
 package com.github.murilo001.cnes;
 
+import java.io.IOException;
+import java.util.logging.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 /**
  * Programa que faz o download do zip, extrai o csv, faz processamento e exibe
@@ -34,7 +35,17 @@ public final class ProgramaCsv {
      * @param args Ignorados.
      */
     public static void main(String[] args) {
+        try {
+            Csv.processar(args);
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(ProgramaCsv.class.getName())
+                    .log(Level.SEVERE, null, ex);
+        }
         
+        
+        
+
+        System.out.println("Executado");
     }
     
 }
