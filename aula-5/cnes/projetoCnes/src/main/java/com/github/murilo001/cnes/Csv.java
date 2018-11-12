@@ -26,22 +26,22 @@ public final class Csv {
     
     public static void processar(String[] args) throws IOException
     {
-        String nomeResultadoJson = "ResultadoJson";
+        Download downloader = new Download();
+        Json utilitarioJson = new Json();
+        String nomeResultadoJson = "ResultadoJson.json";
         int size = args.length;
         if (size >= 1 && !StringUtils.isBlank(args[0]))
         {
-            System.out.println("entrou");
             UrlValidator urlValidator = new UrlValidator();
             if (urlValidator.isValid(args[0])) {
-                System.out.println("url is valid");
                 if (size >= 2 && !StringUtils.isBlank(args[1]))
                 {
                     nomeResultadoJson = args[1];
-                    Download.baixa(args[0]);
-                }    
-                else {
-                    Download.baixa(args[0]);
-                }
+                    if (!nomeResultadoJson.contains(".json"))
+                        nomeResultadoJson += ".json";
+                }   
+                utilitarioJson.processaArquivo(
+                            downloader.baixa(args[0]), nomeResultadoJson);
             } else {
                 System.out.println("url is invalid");
             }

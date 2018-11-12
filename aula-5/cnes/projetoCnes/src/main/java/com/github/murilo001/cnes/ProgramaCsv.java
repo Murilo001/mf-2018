@@ -41,11 +41,7 @@ public final class ProgramaCsv {
             java.util.logging.Logger.getLogger(ProgramaCsv.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-
-        System.out.println("Executado");
+        System.out.println("Operação concluída.");
     }
     
 }
