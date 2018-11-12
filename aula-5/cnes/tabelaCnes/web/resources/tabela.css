@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/11/2018, 20:20:50
+    Author     : Murilo
+*/
+
+.tg {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tg thead {
+  background-color: #166eeb;
+  display: block;
+  width: 100%;
+}
+
+.tg tbody {
+  height: 314px;
+  width: 100%;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tg td {
+  padding: 10px 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.tg th {
+  padding: 10px 0px 10px 10px;
+  color: white;
+}
+
+.tg th:nth-child(2) {
+  padding-left: 39px;
+}
+
+.tg tr:hover {
+  background-color: #ddd;
+}
