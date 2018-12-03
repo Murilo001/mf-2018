@@ -6,6 +6,7 @@
  */
 package com.github.murilo001.loinc;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import org.apache.logging.log4j.LogManager;
@@ -35,8 +36,9 @@ public final class ProgramaCsv {
      * @param args Ignorados.
      */
     public static void main(String[] args) {
+        System.out.println(new File(".").getAbsolutePath());
         try {
-            Csv.processar(args);
+            TableCore.processarArquivoZipado(args[0], true);
         } catch (IOException ex) {
             java.util.logging.Logger.getLogger(ProgramaCsv.class.getName())
                     .log(Level.SEVERE, null, ex);

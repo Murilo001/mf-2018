@@ -52,13 +52,14 @@ public final class Download {
     
     public ZipInputStream descompacta(InputStream inputStream) throws IOException {
         ZipInputStream zin;
-        List<ZipInputStream> zins = new ArrayList<>();
         zin = new ZipInputStream(inputStream);
         ZipEntry entry;
         System.out.println("Aguarde...");
         while ((entry = zin.getNextEntry()) != null) {
-            if (entry.getName().contains("LoincTableCore"))
+            System.out.println(entry.getName());
+            if (entry.getName().contains("LoincTableCore.csv"))
             {
+                System.out.println("achou miserável");
                 return zin;
             }
         }

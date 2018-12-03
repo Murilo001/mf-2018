@@ -3,6 +3,11 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/kyriosdata/exemplo/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/kyriosdata/exemplo?targetFile=pom.xml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.kyriosdata/exemplo/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.kyriosdata/exemplo)
 
+
+Exemplo de comando para executar (Após mvn compile)
+mvn exec:java -Dexec.mainClass="com.github.murilo001.loinc.ProgramaCsv" -Dexec.args="C:\\UFG\\Metodos_e_Ferramentas\\mf-2018\\aula-8\\loinc\\Loinc_2.64_LoincTableCore.zip"
+
+
 # Escopo e objetivo
 Projeto de referência básico em Java contendo uma biblioteca e uma aplicação. 
 A biblioteca contém um único método que determina o dia da semana de uma 
